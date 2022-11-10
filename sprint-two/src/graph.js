@@ -61,7 +61,7 @@ Graph.prototype.forEachNode = function(cb) {
   //for (node in this.parent) {
   //  cb(node);
   //}
-  _.each(this.parent, function(value, key) {cb(key)});
+  _.each(this.parent, function(value, key) { cb(key); });
 };
 
 /*

@@ -18,8 +18,8 @@ var Queue = function() {
     var value = Object.values(storage)[0];
     delete storage[key];
     for (var i = 1; i < someInstance.size; i++) {
-        storage[i - 1] = storage[i];
-        delete storage[i];
+      storage[i - 1] = storage[i];
+      delete storage[i];
     }
     return value;
   };
