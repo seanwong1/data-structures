@@ -73,4 +73,17 @@ describe('hashTable', function() {
     hashTable.remove('Mr.');
     expect(hashTable._limit).to.equal(8);
   });
+
+  it('should return number of buckets used in array', function() {
+    hashTable.insert('Bob', 'Loblaw');
+    hashTable.insert('Greg', 'Barker');
+    expect(hashTable._length).to.equal(2);
+  });
+
+  it('should return number of buckets used in array after removal', function() {
+    hashTable.insert('Bob', 'Loblaw');
+    hashTable.insert('Greg', 'Barker');
+    hashTable.remove('Greg');
+    expect(hashTable._length).to.equal(1);
+  });
 });

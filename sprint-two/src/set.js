@@ -23,6 +23,15 @@ setPrototype.remove = function(item) {
   delete this._storage[item];
 };
 
+setPrototype.union = function(set) {
+  var newSet = Set();
+  newSet._storage = this._storage;
+  var keys = Object.keys(set._storage);
+  for (var i = 0; i < keys.length; i++) {
+    newSet.add(keys[i]);
+  }
+  return newSet;
+};
 /*
  * Complexity: What is the time complexity of the above functions?
  */

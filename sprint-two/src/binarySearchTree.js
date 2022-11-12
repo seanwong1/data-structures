@@ -34,6 +34,7 @@ var BinarySearchTree = function(value) {
   obj.left = null;
   obj.right = null;
   obj.value = value;
+  obj.count = 0;
   return obj;
 };
 
@@ -41,7 +42,7 @@ var methods = {};
 
 methods.insert = function(value, tree = this) {
   var newTree = BinarySearchTree(value);
-  
+  tree.count++;
   // console.log(typeof this.insert);
   //if (!tree) {
   // tree = newTree;

@@ -24,4 +24,17 @@ describe('set', function() {
     expect(set.contains('Mel Gibson')).to.equal(false);
   });
 
+  it('should contain values in both sets', function() {
+    set.add('Susan Sarandon');
+    set.add('Danny Glover');
+    setB = Set();
+    setB.add('1234');
+    setB.add('5678');
+    setC = set.union(setB);
+    expect(setC.contains('Danny Glover')).to.equal(true);
+    expect(setC.contains('Susan Sarandon')).to.equal(true);
+    expect(setC.contains('1234')).to.equal(true);
+    expect(setC.contains('5678')).to.equal(true);
+  });
+
 });

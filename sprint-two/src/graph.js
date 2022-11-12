@@ -1,11 +1,13 @@
 // Instantiate a new graph
 var Graph = function() {
   this.parent = {};
+  this.length = 0;
 };
 
 // Add a node to the graph, passing in the node's value.
 Graph.prototype.addNode = function(node) {
   this.parent[node] = [];
+  this.length++;
 };
 
 // Return a boolean value indicating if the value passed to contains is represented in the graph.
@@ -24,6 +26,7 @@ Graph.prototype.removeNode = function(node) {
     }
   }
   delete this.parent[node];
+  this.length--;
 };
 
 // Returns a boolean indicating whether two specified nodes are connected.  Pass in the values contained in each of the two nodes.
