@@ -32,7 +32,7 @@ HashTable.prototype.retrieve = function(k) {
   var bucket = this._storage[index];
   var result;
   for (var i = 0; i < bucket.length; i++) {
-    console.log('bucket', bucket[i][0]);
+    // console.log('bucket', bucket[i][0]);
     if (bucket[i][0] === k) {
       // return bucket[i][1];
       result = bucket[i][1];
